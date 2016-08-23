@@ -1,6 +1,6 @@
-{"namespace": "com.ttech.tims",
+{"namespace": "com.cansever",
  "type": "record",
- "name": "TimsMessage",
+ "name": "Message",
  "fields": [
      {"name": "msgId", "type": "string"},
      {"name": "username",  "type": "string"},

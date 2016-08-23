@@ -15,7 +15,7 @@ public class MessageObj {
     private long sentTime;
 
     public MessageObj(Message message) {
-        PacketExtension ext = message.getExtension("backup", "tims:xmpp:backup");
+        PacketExtension ext = message.getExtension("backup", "xmpp:backup");
         if(message.getFrom() != null) {
             if (ext != null && "in".equals(ext.getElement().getTextTrim())) {
                 this.username = message.getFrom().getNode();
@@ -25,7 +25,7 @@ public class MessageObj {
                 this.jid = message.getFrom().toBareJID();
             }
         }
-        PacketExtension timeExtension = message.getExtension("sentTime", "tims:xmpp:messageExtensions");
+        PacketExtension timeExtension = message.getExtension("sentTime", "xmpp:messageExtensions");
         long time;
         if(timeExtension != null) {
             time = Long.parseLong(timeExtension.getElement().getTextTrim());
