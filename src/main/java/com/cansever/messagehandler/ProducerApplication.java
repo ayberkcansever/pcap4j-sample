@@ -53,7 +53,7 @@ public class ProducerApplication {
         final PcapHandle handle = builder
                 .promiscuousMode(PromiscuousMode.PROMISCUOUS)
                 .timeoutMillis(5000)
-                .bufferSize(128 * 1024 * 1024)
+                .bufferSize(64 * 1024 * 1024)
                 .snaplen(65536)
                 .build();
 
